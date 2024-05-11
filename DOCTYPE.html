@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Employee Details</title>
+
+    <link rel="stylesheet" href="../static/css/emp.css">
+
+</head>
+
+<body>
+
+    <h1>Employee Details</h1>
+
+    <table border="1px">
+
+        <thead>
+
+            <tr>
+
+                <th>Employee Id</th>
+
+                <th>Employee Name</th>
+
+                <th>Employee Salary</th>
+
+                <th>Employee Dept</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for i in sqldata %}
+
+            <tr>
+
+                <td>{{i[0]}}</td>
+
+                <td>{{i[1]}}</td>
+
+                <td>{{i[2]}}</td>
+
+                <td>{{i[3]}}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
